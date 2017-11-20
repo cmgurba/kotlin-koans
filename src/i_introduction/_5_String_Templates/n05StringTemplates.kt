@@ -35,4 +35,4 @@ fun todoTask5(): Nothing = TODO(
     documentation = doc5(),
     references = { getPattern(); month })
 
-fun task5(): String = todoTask5()
+fun task5() = """\d{2} $month \d{4}""" // only need curly braces for literals or expressions, not vars
