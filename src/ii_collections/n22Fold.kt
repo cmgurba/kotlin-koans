@@ -16,6 +16,9 @@ fun Shop.getSetOfProductsOrderedByEveryCustomer(): Set<Product> {
     // Return the set of products ordered by every customer
     return customers.fold(allOrderedProducts, {
         orderedByAll, customer ->
-        todoCollectionTask()
+//            val unusedProducts = allOrderedProducts.minus(customer.orderedProducts)
+            // better collections method
+            orderedByAll.intersect(customer.orderedProducts)
+
     })
 }

@@ -27,6 +27,7 @@ public class _24_JavaCode extends JavaCode {
             }
         }
 
+        // wat? just grab by key.
         for (List<String> group : groupsByLength.values()) {
             if (group.size() == maximumSizeOfGroup) {
                 return group;

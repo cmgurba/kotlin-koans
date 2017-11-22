@@ -8,5 +8,9 @@ fun example7() {
 
 fun Shop.groupCustomersByCity(): Map<City, List<Customer>> {
     // Return a map of the customers living in each city
-    todoCollectionTask()
+
+    // groupBy returns a map of the
+    // callee iteratable to the field/type returned by the lambda passed
+    // to it. i.e. here its city -> customers
+    return customers.groupBy { it.city }
 }

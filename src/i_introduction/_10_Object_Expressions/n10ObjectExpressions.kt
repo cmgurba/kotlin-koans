@@ -18,6 +18,13 @@ fun todoTask10(): Nothing = TODO(
 
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
+    // sort takes Comparator type as second argument
+    // kotlin equivalent of an anonymous class with a function override.
+//    Collections.sort(arrayList, object: Comparator<Int> {
+//        // body to override functions..
+//        override fun compare(o1: Int, o2: Int) = o2 - o1
+//    })
+    // lambda way:
+     Collections.sort(arrayList, {x, y -> y - x})
     return arrayList
 }
