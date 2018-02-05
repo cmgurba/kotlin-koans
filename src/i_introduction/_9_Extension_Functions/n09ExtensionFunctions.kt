@@ -29,6 +29,8 @@ fun todoTask9(): Nothing = TODO(
 
 data class RationalNumber(val numerator: Int, val denominator: Int)
 
+// https://medium.com/@quiro91/getting-to-know-kotlins-extension-functions-some-caveats-to-keep-in-mind-d14d734d108b
+// compile time type vs runtime type ^
 fun Int.r(): RationalNumber = RationalNumber(this, 1)
 fun Pair<Int, Int>.r(): RationalNumber = RationalNumber(this.first, this.second)
 
